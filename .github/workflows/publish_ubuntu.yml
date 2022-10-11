@@ -16,4 +16,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
           repository: robbeth-pxl/iot-2/dockerpkg-ubuntu
-          tag_with_sha: true
+          tag_with_sha: false
+          tags: latest
