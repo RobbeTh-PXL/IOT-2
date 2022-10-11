@@ -5,6 +5,17 @@ terraform {
       version = "2.22.0"
     }
   }
+
+  # The configuration for the `remote` backend.
+  backend "remote" {
+   # The name of your Terraform Cloud organization.
+   organization = "TheTestingOrg"
+
+   # The name of the Terraform Cloud workspace to store Terraform state files in.
+   workspaces {
+     name = "IOT-2"
+    }
+  }
 }
 
 provider "docker" {
