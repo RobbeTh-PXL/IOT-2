@@ -19,7 +19,8 @@ terraform {
 }
 
 provider "docker" {
-  host    = "npipe:////.//pipe//docker_engine"
+#  host    = "npipe:////.//pipe//docker_engine"
+  host = "unix:///var/run/docker.sock"
 }
 
 resource "docker_image" "hello" {
