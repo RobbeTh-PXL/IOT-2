@@ -11,16 +11,12 @@ provider "docker" {
   host    = "npipe:////.//pipe//docker_engine"
 }
 
-resource "docker_image" "nginx" {
-  name         = "nginx:latest"
+resource "docker_package" "helloworld" {
+  name         = "ghcr.io/robbeth-pxl/iot-2/dockerpkg-ubuntu:sha-d502aa0"
   keep_locally = false
 }
 
-resource "docker_container" "nginx" {
-  image = docker_image.nginx.latest
-  name  = "tutorial"
-  ports {
-    internal = 80
-    external = 8000
-  }
+resource "docker_container" "helloworldx" {
+  image = docker_package.helloworld.sha-d502aa0
+  name  = "Hello World"
 }
