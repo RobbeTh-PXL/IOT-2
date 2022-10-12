@@ -30,3 +30,13 @@ The Nix coding language is pure functional and rather simple to understand.
 The packages are community build.
 Reproducibility :)
 ```
+
+## NOTES
+I also tried using the Nix environment to run and compile the cpp code. Unfortunately I deleted the repo.
+I did all of the basic tasks.
+The following bonus tasks where completed:
+- Auto format Terraform code in GA
+- Create PR when not formatted correctly
+- Package release through git tags
+- Terraform remote state
+- Build image with Nix (failed/half successfull, see above)
