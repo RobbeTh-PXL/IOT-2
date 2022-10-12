@@ -23,13 +23,13 @@ provider "docker" {
   #  host = "unix:///var/run/docker.sock"
 }
 
-resource "docker_image" "hello" {
+resource "docker_image" "githubpackage" {
   name         = "ghcr.io/robbeth-pxl/iot-2/dockerpkg-ubuntu:latest"
   keep_locally = false
 }
 
 resource "docker_container" "helloworld" {
-  image    = docker_image.hello.image_id
+  image    = docker_image.githubpackage.image_id
   name     = "hello-world"
   must_run = false
 }
