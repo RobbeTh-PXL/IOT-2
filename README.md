@@ -21,6 +21,8 @@ We use code to describe the software's environments & dependencies/needs (in ord
 ```
 Terraform is an infrastructure as code tool. In CI/CD it's impossible to manually manage the individual infrastructures.
 This tool helps you with the Continuous Integration and Continuous Deployment on different machines.
+
+We can go from click-ops to code.
 ```
 
 ## Why you think Nix is awesome
